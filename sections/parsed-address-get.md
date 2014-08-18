@@ -1,20 +1,18 @@
-/parsed-address
-===============
-
-Parse provided address into separate components and format it.
-
-GET /parsed-address
--------------------
+# GET /parsed-address
 
     /parsed-address
 
-### Paramaters
+Parse provided address into separate components and format it.
+
+
+## Paramaters
 
 Parameter | Description
 :---------|:------------------------
 address   | Unparsed address string
 
-### Example
+
+## Example
 
 ```shell
 curl -H 'Content-Type: application/json' \
@@ -41,46 +39,7 @@ The above request would return following response:
     }
 
 
-POST /parsed-address
---------------------
-
-If you prefer not to pass address data through a query string using GET method, you can POST unparsed address as JSON.
-
-### Request
-
-    {
-        "address": "1600 pennsylvania ave north-west washington dc 20500"
-    }
-
-### Example
-
-```shell
-curl -H 'Content-Type: application/json' \
-  -d '{ "address": "1600 pennsylvania ave north-west washington dc 20500" }' \
-  http://api.addresslabs.com/v1/parsed-address
-```
-The above request would return following response:
-
-    {
-        "number": "1600",
-        "street": "Pennsylvania",
-        "street_suffix": "Ave",
-        "street_post_direction": "NW",
-        "city": "Washington",
-        "state": "DC",
-        "state_fips": "11",
-        "zip": "20500",
-        "intersection": false,
-        "delivery": {
-            "address_line": "1600 Pennsylvania Ave NW",
-            "last_line": "Washington DC  20500"
-        },
-        "input": "1600 pennsylvania ave north-west washington dc 20500"
-    }
-
-
-Response JSON
--------------
+## Response JSON
 
 Property                  | Description
 :-------------------------|:--------------------------------------

@@ -24,7 +24,8 @@ You'll receive a `415 Unsupported Media Type` response code if you attempt to us
 API
 ---
 
-* [/parsed-address](https://github.com/addresslabs/api-docs/blob/master/sections/parsed-address.md)
+* [GET /parsed-address](https://github.com/addresslabs/api-docs/blob/master/sections/parsed-address-get.md)
+* [POST /parsed-address](https://github.com/addresslabs/api-docs/blob/master/sections/parsed-address-post.md)
 
 
 Handling errors
